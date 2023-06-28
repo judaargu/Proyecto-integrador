@@ -1,0 +1,10 @@
+body {
+    background-image:url("../images/rick-and-morty-background2.jpg");
+    background-size: cover;
+}
+
+.principalDiv {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}

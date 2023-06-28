@@ -1,0 +1,13 @@
+.searchDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#button{
+    margin: 0;
+    height: 32px;
+    width: max-content;
+    padding: 0px 10px;
+}

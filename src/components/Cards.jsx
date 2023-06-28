@@ -1,8 +1,9 @@
 import React from 'react';
 import Card from './Card';
+import Styled from './styles/Cards.module.css';
 
 export default function Cards(props) {
-   return <div>
+   return <div className={Styled.principalDiv}>
       {props.characters.map((character) => {
          return <Card 
          key={character.id} 
