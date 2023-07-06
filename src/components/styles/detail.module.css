@@ -5,7 +5,7 @@
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.89);
     padding: 3%;
-    margin-top: 4%;
+    margin-top: 1%;
     margin-left: 8%;
     border-radius: 10%;
     box-shadow: inset 0px 0px 10px 3px #38ef7d;
@@ -15,7 +15,7 @@
     height: 100%;
     width: 20%;
     text-align: left;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 .name label{

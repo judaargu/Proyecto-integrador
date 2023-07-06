@@ -32,7 +32,7 @@ export default function rootReducer (state=initialState, action) {
         case ORDER:
             return {
                 ... state,
-                myFavorites: state.allCharacters.sort((a, b) => {
+                myFavorites: state.myFavorites.sort((a, b) => {
                     if (action.payload === 'A'){
                         if (a.id > b.id) {
                             return 1;

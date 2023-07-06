@@ -13,7 +13,7 @@ export default function SearchBar(prop) {
 
    return (
       <div className={Styled.searchDiv}>
-         <input type='search' placeholder='Busca personaje...' onChange={handleChange} value={id}/>
+         <input type='search' placeholder='Search a character...' onChange={handleChange} value={id}/>
          <button onClick={() => {prop.onSearch(id)}} className={Styled.searchButton}>Add</button>
       </div>
    );
