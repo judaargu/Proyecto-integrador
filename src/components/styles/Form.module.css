@@ -1,0 +1,46 @@
+.divForm{
+    width: 30%;
+    height: 100%;
+    margin-left: 490px;
+    margin-top: 150px;
+    background-color: rgba(0, 0, 0, 0.788);
+    box-shadow: inset 0px 0px 10px 3px #38ef7d;
+    padding: 3%;
+    align-items: center;
+    color: #fff;
+}
+
+.divForm input{
+    width: 100%;
+    height: 70%;
+    border: 1px solid #fff;
+    background: none;
+    border-radius: 5%;
+    color: #fff;
+}
+
+.divForm button {
+    width: 80%;
+    margin-top: 40px;
+    background: none;
+    border: 1px #fff;
+    border-radius: 10%;
+    box-shadow: 1px 1px 3px #11998e;
+    color: #fff;
+    transition: all .3s;
+}
+
+.divForm button:hover{
+    transform: scale(1.05);
+    background-color: #11998e;
+}
+
+.warning {
+    border: solid red 10px;
+    border-radius: 0.2em;
+}
+  
+.danger {
+    font-size: 15px;
+    color: red;
+}

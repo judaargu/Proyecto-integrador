@@ -1,13 +1,32 @@
 .searchDiv{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    height: 100%;
+    padding: 17px;
+    background-color: rgba(0, 0, 0, 0.918);
+    border: none;
+    border-radius: 5%;
 }
 
-#button{
-    margin: 0;
-    height: 32px;
-    width: max-content;
-    padding: 0px 10px;
+.searchDiv input{
+    width: 70%;
+    background: none;
+    color: #38ef7d;
+    border: none;
+    outline: 0px;
+}
+
+.searchButton{
+    height: 100%;
+    width: 23%;
+    border-radius: 10%;
+    border: none;
+    background-color: #39363bd8;
+    color: #11998e;
+}
+
+.searchButton:hover{
+    background-color: #2B2730;
 }

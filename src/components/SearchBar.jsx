@@ -1,12 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React from "react";
+import { useState } from 'react';
 import Styled from "./styles/SearchBar.module.css"
 
-export default function SearchBar(props) {
+export default function SearchBar(prop) {
+
+   const [id, setId] = useState('');
+
+   const handleChange = (event) => {
+      setId(event.target.value);
+   }
+
    return (
       <div className={Styled.searchDiv}>
-         <input type='search'/>
-         <button onClick={props.onSearch} className="btn btn-dark" id={Styled.button}>Agregar</button>
+         <input type='search' placeholder='Busca personaje...' onChange={handleChange} value={id}/>
+         <button onClick={() => {prop.onSearch(id)}} className={Styled.searchButton}>Add</button>
       </div>
    );
 }

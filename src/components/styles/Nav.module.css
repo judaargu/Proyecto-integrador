@@ -1,0 +1,19 @@
+.divNav{
+    display: flex;
+    justify-content:space-around;
+    height: 70px;
+}
+
+.buttonNav{
+    margin: 17px;
+    height: 55%;
+    width: 100%;
+    border-radius: 10%;
+    border: none;
+    background-color: #39363bda;
+    color: #38ef7d;
+}
+
+.buttonNav:hover{
+    background-color: #2B2730;
+}
