@@ -1,12 +1,12 @@
 .body{
     width: 85%;
-    height: 100%;
+    height: 50%;
     display: flex;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.89);
     padding: 3%;
-    margin-top: 1%;
-    margin-left: 8%;
+    margin-top: 2%;
+    margin-left: 4%;
     border-radius: 10%;
     box-shadow: inset 0px 0px 10px 3px #38ef7d;
 }
@@ -15,7 +15,7 @@
     height: 100%;
     width: 20%;
     text-align: left;
-    margin-top: 10%;
+    padding-top: 13%;
 }
 
 .name label{
@@ -28,6 +28,7 @@
 .name span{
     font-size: 40px;
     color: #38ef7d;
+    border-bottom: 1px solid #38ef7d;
     
 }
 
@@ -43,7 +44,8 @@
     height: 100%;
     text-align: center;
     margin-top: 20%;
-    list-style: circle ;
+    list-style: circle;
+    
 }
 
 .details li{
@@ -51,4 +53,8 @@
     font-size: 20px;
     color: #38ef7d;
     line-height:400%;
+}
+
+.details li label {
+    border-bottom: 1px solid #38ef7d;
 }

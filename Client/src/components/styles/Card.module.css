@@ -34,6 +34,7 @@
     border-radius: 3%;
     filter: contrast(150%);
     box-shadow: 3px 3px 5px;
+    margin: 5%;
 }
 
 
@@ -41,8 +42,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    line-height: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 .buttonCard{
@@ -79,6 +80,7 @@
 
 .cardNavlink {
     color: #38ef7d;
+    font-size: 25px;
     text-decoration: none;
     transition: all .9s;
 }
