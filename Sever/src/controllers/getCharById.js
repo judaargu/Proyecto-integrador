@@ -1,35 +1,60 @@
-const axios = require('axios');
+const URL = "https://rickandmortyapi.com/api/character/";
+const axios = require("axios");
 
-const getCharacterById = (res, id) => {
+async function getCharacterById (req, res) {
+  let props = {};
+  let { id } = req.params;
 
-    let promise = new Promise((resolve, reject) => {
-        var props = {};
-        axios(`https://rickandmortyapi.com/api/character/${id}`).then(({data}) => {
-            if (data){
-                props = {
-                    id : data.id,
-                    name : data.name,
-                    gender : data.gender,
-                    species : data.species,
-                    origin : data.origin,
-                    image : data.image,
-                    status : data.status,
-                }
-            // resolve({status:200, data:JSON.stringify(props)});
-            res.writeHead(200);
-            res.end(JSON.stringify(props));
-            resolve(res);
-            }
-        });
-    }).then(data => console.log(data.status))
-    .catch((message) => {
-        res.writeHead(500, {'Content-Type' : 'text/plain'});
-        res.end(message);
-        return res
-    });
-    return promise;
-}
+  try {
+    let {data} = await axios(`${URL}/${id}`);
+    
+    if (data.error) {
+        return res.status(404).send(data.error);
+
+    }
+
+    props = {
+    id: data.id,
+    name: data.name,
+    gender: data.gender,
+    species: data.species,
+    origin: data.origin,
+    image: data.image,
+    status: data.status,
+
+    };
+    return res.status(200).json(props);
+
+  } catch (error) {
+    return res.status(500).send(error.message); 
+
+  }
+
+//   axios(`${URL}/${id}`).then(({ data }) => {
+    
+//     if (data.error) {
+//       return res.status(404).send(data.error);
+
+//     }
+
+//     props = {
+//     id: data.id,
+//     name: data.name,
+//     gender: data.gender,
+//     species: data.species,
+//     origin: data.origin,
+//     image: data.image,
+//     status: data.status,
+
+//     };
+//     return res.status(200).json(props);
+
+//     })
+//     .catch((error) => {
+//         return res.status(500).send(error.message);
+//     })
+};
 
 module.exports = {
-    getCharacterById,
-}
+  getCharacterById,
+};

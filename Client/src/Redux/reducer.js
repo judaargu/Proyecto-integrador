@@ -9,21 +9,16 @@ const initialState = {
 export default function rootReducer (state=initialState, action) {
     switch (action.type){
         case ADD_FAV:
-            // return {
-            //     ...state, 
-            //     myFavorites: [...state.myFavorites, action.payload],
-            // }
-            return {
-                ...state,
-                myFavorites: [...state.myFavorites, action.payload],
-                allCharacters: [...state.allCharacters, action.payload],
-            }
-        case REMOVE_FAV:
-            return {
+            return { 
                 ...state, 
-                myFavorites: state.myFavorites.filter((char) => char.id !== Number(action.payload)),
-                allCharacters: state.allCharacters.filter((char) => char.id !== Number(action.payload)),
-            }
+                myFavorites: action.payload, 
+                allCharacters: action.payload 
+            };
+        case REMOVE_FAV:
+            return { 
+                ...state, 
+                myFavorites: action.payload 
+            };
         case FILTER:
             return {
                 ...state,

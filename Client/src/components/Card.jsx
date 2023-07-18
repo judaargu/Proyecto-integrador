@@ -21,12 +21,6 @@ function Card(props) {
       }
 
    }
-
-   const onCloseAndFav = () => {
-      setIsFav(false);
-      props.removeFav(props.id);
-      return props.onClose(props.id);
-   }
    
    useEffect(() => {
       props.myFavorites.forEach((fav) => {
@@ -45,8 +39,11 @@ function Card(props) {
                <p >{props.gender}</p>
                <p >{props.status}</p>
                <p >{props.origin}</p>
-               <button className={Style.buttonCard} 
-               onClick={onCloseAndFav}>X</button>
+               {props.onClose ? (
+                  <button className={Style.buttonCard} onClick={() => props.onClose(props.id)}>
+                  X
+                  </button>
+               ) : null}
                {
                   isFav ? (
                      <button onClick={handleFavorite} className={Style.buttonFav}>❤️</button>
