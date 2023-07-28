@@ -10,11 +10,8 @@ const routerLog = express.Router();
 const routerPostLog = express.Router();
 const routerFav = express.Router();
 const routerDelFav = express.Router();
-const routerAudio = express.Router();
-
 
 routerChar.get('/character/:id', getCharacterById);
-routerAudio.get('/audio', getAudio);
 routerLog.get('/login', login);
 routerPostLog.post('/login', postUser);
 routerFav.post('/fav', postFav);
@@ -27,6 +24,5 @@ module.exports = {
     routerPostLog,
     routerFav,
     routerDelFav,
-    routerAudio,
 }
 

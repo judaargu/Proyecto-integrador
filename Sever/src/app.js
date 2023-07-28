@@ -2,7 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const server = express();
 const cors = require('cors');
-const {routerChar, routerLog, routerPostLog, routerFav, routerDelFav, routerAudio} = require('./routes/index');
+const {routerChar, routerLog, routerPostLog, routerFav, routerDelFav} = require('./routes/index');
 
 server.use(express.json());
 server.use(morgan('dev'));
@@ -27,7 +27,6 @@ server.use('/rickandmorty', routerLog);
 server.use('/rickandmorty', routerPostLog);
 server.use('/rickandmorty', routerFav);
 server.use('/rickandmorty', routerDelFav);
-server.use('/rickandmorty', routerAudio);
 
 module.exports = {
     server,
